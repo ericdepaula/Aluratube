@@ -2,6 +2,10 @@
     "name": "Eric de Paula",
     "job": "Estagiário",
     "github": "ericdepaula",
+    "favorites":{
+        "title":"Nome do cara" ,
+        "thumb":"foto do cara" 
+    },
     "playlists": {
         "jogos": [
             {
