@@ -5,9 +5,9 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
 function HomePage() {
-	const estilosDaHomePage = {
-		// backgroundColor: "red" 
-	};
+	// const estilosDaHomePage = {
+	// 	// backgroundColor: "red" 
+	// };
 
 	// console.log(config.playlists);
 
@@ -17,7 +17,7 @@ function HomePage() {
 			<div style={{
 				display: "flex",
 				flexDirection: "column",
-				flex: 1,
+				flex: 1
 				// backgroundColor: "red",
 			}}>
 				<Menu />
@@ -55,13 +55,12 @@ const StyledHeader = styled.div`
         padding: 16px 32px;
         gap: 16px;
     }
-	.banner{
+	.banner {
       position: flex;
       width: 1512px 100%;
       height: 230px;
       left: 0px;
       top: 56px;
-
       background: url("https://images.unsplash.com/photo-1450849608880-6f787542c88a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80");
 	}
 `;
@@ -92,7 +91,7 @@ function Header() {
 }
 
 function Timeline(propriedades) {
- 
+
 	const playlistNames = Object.keys(propriedades.playlists);
 
 	return (
@@ -102,14 +101,14 @@ function Timeline(propriedades) {
 				console.log(playlistName);
 				console.log(videos);
 				return (
-					<section>
+					<section key={playlistName}>
 						<h2>{playlistName}</h2>
 						<div>
 							{videos.map((video) => {
 								return (
-									<a href={video.url}>
+									<a href={video.url} key={video.title}>
 										<img src={video.thumb} />
-										<span>
+										<span >
 											{video.title}
 										</span>
 									</a>
