@@ -2,6 +2,20 @@
     "name": "Eric de Paula",
     "job": "Estagiário",
     "github": "ericdepaula",
+    "favoritos": {
+        "canais": [
+            {
+                "title": "Guiven",
+                "url": "https://www.youtube.com/channel/UCUCUMSDBR74z_r6nYa7APvA",
+                "card": "https://yt3.ggpht.com/ffYpdcOvA_C51nw8RkhPHOdvKDHUQTX0drG7ajx9HEsY3Afqd36tSoXZJXTVpddUyOcnWhMhsA=s88-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                "title": "Guiven",
+                "url": "https://www.youtube.com/channel/UCUCUMSDBR74z_r6nYa7APvA",
+                "card": "https://yt3.ggpht.com/ffYpdcOvA_C51nw8RkhPHOdvKDHUQTX0drG7ajx9HEsY3Afqd36tSoXZJXTVpddUyOcnWhMhsA=s88-c-k-c0x00ffffff-no-rj"
+            }
+        ]
+    },
     "playlists": {
         "jogos": [
             {

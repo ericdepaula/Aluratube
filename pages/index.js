@@ -22,9 +22,10 @@ function HomePage() {
 			}}>
 				<Menu />
 				<Header />
-				<Timeline playlists={config.playlists}>
+				<Timeline playlists={config.playlists} favoritos={config.favoritos}>
 					Conteúdo
 				</Timeline>
+
 			</div>
 		</>
 	);
@@ -64,6 +65,16 @@ const StyledHeader = styled.div`
       background: url("https://images.unsplash.com/photo-1450849608880-6f787542c88a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80");
 	}
 `;
+// const Card = styled.div`
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// padding: 0px;
+// gap: 8px;
+
+// width: 100px;
+// height: 124px;
+// `;
 // function Banner() {
 // 	return (
 // 		<StyledHeader>
@@ -93,6 +104,7 @@ function Header() {
 function Timeline(propriedades) {
 
 	const playlistNames = Object.keys(propriedades.playlists);
+	const canalfav = Object.keys(propriedades.favoritos);
 
 	return (
 		<StyledTimeline>
@@ -110,6 +122,28 @@ function Timeline(propriedades) {
 										<img src={video.thumb} />
 										<span >
 											{video.title}
+										</span>
+									</a>
+								)
+							})}
+						</div>
+					</section>
+				)
+			})},
+			{canalfav.map((canal) => {
+				const fav = propriedades.favoritos[canalfav];
+				console.log(canalfav);
+				console.log(fav);
+				return (
+					<section key={canal}>
+						<h3>{canal}</h3>
+						<div>
+							{fav.map((cal) => {
+								return (
+									<a href={cal.url} key={cal.title}>
+										<img src={cal.thumb} />
+										<span>
+											{cal.title}
 										</span>
 									</a>
 								)
